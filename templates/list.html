@@ -1,0 +1,13 @@
+<a href="{% url 'PostCreateView' %}"><button>create</button></a>
+
+{% for publisher in object_list %}
+<div>
+
+ <a href="{% url 'PostDetailView' publisher.id %}">{{ publisher.name }}</a>
+ <a href="{% url 'PostUpdateView' publisher.id %}"><button>edit</button></a>
+ <a href="{% url 'PostDeleteView' publisher.id %}"><button>delete</button></a>
+
+</div>
+{% endfor %}
+
+
